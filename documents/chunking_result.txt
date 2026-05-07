@@ -1,0 +1,58 @@
+(.venv) PS C:\Users\longb\OneDrive\Documents\New project\everfit-ai-coach> python -m app.rag.ingest --kb-dir data/kb --reset
+2026-05-07 16:43:48.345 | INFO     | __main__:main:293 - Loading markdown knowledge base from: data/kb
+2026-05-07 16:43:48.345 | INFO     | __main__:main:294 - Embedding model: text-embedding-3-small
+2026-05-07 16:43:48.345 | INFO     | __main__:main:295 - Chroma directory: ./data/chroma
+2026-05-07 16:43:57.346 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 01-bench-press.md: 7 chunks
+2026-05-07 16:43:57.364 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 02-squat.md: 8 chunks
+2026-05-07 16:43:57.365 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 03-deadlift.md: 8 chunks
+2026-05-07 16:43:57.382 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 04-overhead-press.md: 6 chunks
+2026-05-07 16:43:57.382 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 05-barbell-row.md: 7 chunks
+2026-05-07 16:43:57.407 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 06-pull-up-chin-up.md: 7 chunks
+2026-05-07 16:43:57.415 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 07-isolation-exercises.md: 12 chunks
+2026-05-07 16:43:57.432 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 08-progressive-overload.md: 13 chunks
+2026-05-07 16:43:57.444 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 09-periodization.md: 11 chunks
+2026-05-07 16:43:57.455 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 10-deload.md: 9 chunks
+2026-05-07 16:43:57.465 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 11-rpe-rir.md: 6 chunks
+2026-05-07 16:43:57.474 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 12-muscle-recovery.md: 10 chunks
+2026-05-07 16:43:57.487 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 13-nutrition-basics.md: 11 chunks
+2026-05-07 16:43:57.498 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 14-workout-split-ppl.md: 10 chunks
+2026-05-07 16:43:57.508 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 15-workout-split-upper-lower.md: 8 chunks
+2026-05-07 16:43:57.516 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 16-workout-split-full-body.md: 8 chunks
+2026-05-07 16:43:57.529 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 17-one-rep-max.md: 10 chunks
+2026-05-07 16:43:57.540 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 18-common-injuries.md: 6 chunks
+2026-05-07 16:43:57.551 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 19-warm-up-cooldown.md: 10 chunks
+2026-05-07 16:43:57.562 | INFO     | __main__:load_and_chunk_kb:209 - Chunked 20-training-for-beginners.md: 9 chunks
+           RAG Ingestion Summary            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃ Document                        ┃ Chunks ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ 01-bench-press.md               │      7 │
+│ 02-squat.md                     │      8 │
+│ 03-deadlift.md                  │      8 │
+│ 04-overhead-press.md            │      6 │
+│ 05-barbell-row.md               │      7 │
+│ 06-pull-up-chin-up.md           │      7 │
+│ 07-isolation-exercises.md       │     12 │
+│ 08-progressive-overload.md      │     13 │
+│ 09-periodization.md             │     11 │
+│ 10-deload.md                    │      9 │
+│ 11-rpe-rir.md                   │      6 │
+│ 12-muscle-recovery.md           │     10 │
+│ 13-nutrition-basics.md          │     11 │
+│ 14-workout-split-ppl.md         │     10 │
+│ 15-workout-split-upper-lower.md │      8 │
+│ 16-workout-split-full-body.md   │      8 │
+│ 17-one-rep-max.md               │     10 │
+│ 18-common-injuries.md           │      6 │
+│ 19-warm-up-cooldown.md          │     10 │
+│ 20-training-for-beginners.md    │      9 │
+└─────────────────────────────────┴────────┘
+Total chunks: 176
+2026-05-07 16:43:58.656 | INFO     | __main__:get_or_create_chroma_collection:247 - No existing collection found. Creating a new one.
+2026-05-07 16:44:01.429 | INFO     | __main__:main:339 - Inserted 32/176 chunks
+2026-05-07 16:44:04.039 | INFO     | __main__:main:339 - Inserted 64/176 chunks
+2026-05-07 16:44:05.266 | INFO     | __main__:main:339 - Inserted 96/176 chunks
+2026-05-07 16:44:06.242 | INFO     | __main__:main:339 - Inserted 128/176 chunks
+2026-05-07 16:44:07.236 | INFO     | __main__:main:339 - Inserted 160/176 chunks
+2026-05-07 16:44:08.056 | INFO     | __main__:main:339 - Inserted 176/176 chunks
+Ingestion completed. Collection='everfit_fitness_kb', PersistDir='./data/chroma', TotalChunks=176

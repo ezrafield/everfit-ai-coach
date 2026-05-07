@@ -1,0 +1,22 @@
+# 1 Install dependencies
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+# 2 Ingest the knowledge base
+Make sure the markdown files exist under:
+data/kb/
+Run:
+python -m app.rag.ingest --kb-dir data/kb --reset
+
+This creates a local Chroma collection under:
+data/chroma/
+
+# 3 Start the API
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+Open:
+http://localhost:8000/ui
+http://localhost:8000/docs
+http://localhost:8000/health
+http://localhost:8000/ready

@@ -1,0 +1,27 @@
+# 1. Build
+docker compose build
+
+# 2. Run RAG ingestion inside Docker
+docker compose run --rm everfit-ai-coach python -m app.rag.ingest --kb-dir /app/data/kb --reset
+
+This will create/persist Chroma data in:
+./data/chroma
+
+# 3. Start API
+docker compose up
+
+Open:
+http://localhost:8000/ui
+http://localhost:8000/docs
+http://localhost:8000/health
+http://localhost:8000/ready
+
+# 4. Run tests inside Docker
+docker compose run --rm everfit-ai-coach pytest -q
+
+# 5. Run evaluation inside Docker
+Fast rule-based evaluation:
+docker compose run --rm everfit-ai-coach python -m app.eval.run_eval --no-llm-judge
+
+Full evaluation with LLM judge:
+docker compose run --rm everfit-ai-coach python -m app.eval.run_eval
